@@ -14,8 +14,7 @@ tags:
 
 ## 安装Spark
 
-https://www.apache.org/dyn/closer.lua/spark/spark-2.4.0/spark-2.4.0-bin-hadoop2.7.tgz
-
+[Spark官方安装包](https://www.apache.org/dyn/closer.lua/spark/spark-2.4.0/spark-2.4.0-bin-hadoop2.7.tgz)
 
 下载spark-2.4.0版本
 
