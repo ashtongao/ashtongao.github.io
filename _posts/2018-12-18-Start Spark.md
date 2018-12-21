@@ -4,7 +4,7 @@ title:      Stark Spark
 subtitle:   Spark的安装以及部署
 date:       2018-12-18
 author:     Ashton
-header-img: img/post-bg-swift2.jpg
+header-img: img/post-bg-os-metro.jpg
 catalog: true
 tags:
     - Spark

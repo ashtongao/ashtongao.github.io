@@ -4,7 +4,7 @@ title:      Stark Kafka
 subtitle:   Kafka的安装以及部署
 date:       2018-12-16
 author:     Ashton
-header-img: img/post-bg-swift2.jpg
+header-img: img/post-bg-os-metro.jpg
 catalog: true
 tags:
     - Kafka
@@ -35,6 +35,7 @@ cd kafka_2.11-2.1.0.tgz
 > 如果已安装请忽略
 
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
 
 ![](2018-12-16-Start%20Kafka/2018-12-16-Start%20Kafka-20181216122310.png)
 
