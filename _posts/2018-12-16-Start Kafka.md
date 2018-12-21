@@ -28,7 +28,7 @@ tar -xzf kafka_2.11-2.1.0.tgz
 cd kafka_2.11-2.1.0.tgz
 ```
 
-![](2018-12-18-Start%20Kafka/2018-12-16-Start%20Kafka-20181216113431.png)
+![](https://ashtongao.github.io/img/2018-12-16-Start%20Kafka/2018-12-16-Start%20Kafka-20181216113431.png)
 
 ### Centos 安装JAVA
 
@@ -37,7 +37,7 @@ cd kafka_2.11-2.1.0.tgz
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
 
-![](2018-12-18-Start%20Kafka/2018-12-16-Start%20Kafka-20181216122310.png)
+![](https://ashtongao.github.io/img/2018-12-16-Start%20Kafka/2018-12-16-Start%20Kafka-20181216122310.png)
 
 ```
 sudo yum install java-1.8.0-openjdk
@@ -56,7 +56,7 @@ Kafka依赖Zookeeper，Kafka安装包中已经内置了ZooKeepr Server
 bin/zookeeper-server-start.sh config/zookeeper.properties
 ```
 
-![](2018-12-18-Start%20Kafka/2018-12-16-Start%20Kafka-20181216113704.png)
+![](https://ashtongao.github.io/img/2018-12-16-Start%20Kafka/2018-12-16-Start%20Kafka-20181216113704.png)
 
 
 ZooKeeper启动之后，开始启动Kafka Server
@@ -67,7 +67,7 @@ bin/kafka-server-start.sh config/server.properties
 
 注意一下机器的内存配置，太小的内存配置会导致kafka启动失败
 
-![](2018-12-18-Start%20Kafka/2018-12-16-Start%20Kafka-20181216114249.png)
+![](https://ashtongao.github.io/img/2018-12-16-Start%20Kafka/2018-12-16-Start%20Kafka-20181216114249.png)
 
 ## 三、创建一个topic
 
@@ -124,7 +124,7 @@ vi config/server-2.properties
     log.dirs=/tmp/kafka-logs-2
 ```
 
-![](2018-12-18-Start%20Kafka/2018-12-16-Start%20Kafka-20181216174934.png)
+![](https://ashtongao.github.io/img/2018-12-16-Start%20Kafka/2018-12-16-Start%20Kafka-20181216174934.png)
 
 重写的三个内容中：
 ```
@@ -254,9 +254,9 @@ foo\nbar
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic connect-test --from-beginning
 ```
 
-![](2018-12-18-Start%20Kafka/2018-12-16-Start%20Kafka-20181216190102.png)
+![](https://ashtongao.github.io/img/2018-12-16-Start%20Kafka/2018-12-16-Start%20Kafka-20181216190102.png)
 
-![](2018-12-18-Start%20Kafka/2018-12-16-Start%20Kafka-20181216185853.png)
+![](https://ashtongao.github.io/img/2018-12-16-Start%20Kafka/2018-12-16-Start%20Kafka-20181216185853.png)
 
 
 持续写入文件
@@ -267,7 +267,7 @@ echo Another line>> test.txt
 
 可以看到console comsumer又多出了一个schema
 
-![](2018-12-18-Start%20Kafka/2018-12-16-Start%20Kafka-20181216190512.png)
+![](https://ashtongao.github.io/img/2018-12-16-Start%20Kafka/2018-12-16-Start%20Kafka-20181216190512.png)
 
 
 

@@ -5,6 +5,7 @@
 *.DS_Store
 .AppleDouble
 .LSOverride
+_posts/img
 
 # Icon must end with two \r
 Icon
