@@ -24,11 +24,11 @@ wget http://mirrors.tuna.tsinghua.edu.cn/apache/spark/spark-2.4.0/spark-2.4.0-bi
 tar -xvf spark-2.4.0-bin-hadoop2.7.tgz
 ```
 
-![](2018-12-19-Start%20Spark/2018-12-18-Start%20Spark-20181218112052.png)
+![](img/2018-12-19-Start%20Spark/2018-12-18-Start%20Spark-20181218112052.png)
 
 Spark依赖Hadoop client库，主要是要使用到HDFS以及YARN，下载的包里面已经预先打包了对应模块
 
-![](2018-12-19-Start%20Spark/2018-12-18-Start%20Spark-20181220093131.png)
+![](img/2018-12-19-Start%20Spark/2018-12-18-Start%20Spark-20181220093131.png)
 
 ## 通过命令行Shell运行
 
@@ -38,7 +38,7 @@ Spark自带了很多example，在目录`examples/src/main`中，可以使用`bin
 ./bin/run-example SparkPi 10
 ```
 
-![](2018-12-19-Start%20Spark/2018-12-18-Start%20Spark-20181218112819.png)
+![](img/2018-12-19-Start%20Spark/2018-12-18-Start%20Spark-20181218112819.png)
 
 
 也可以通过Spark-Shell来运行Spark
@@ -53,7 +53,7 @@ local[2] 代表本地运行，同时开启2个线程
 
 运行后会看到Spark-Shell接口，通过Scala语言来交互
 
-![](2018-12-19-Start%20Spark/2018-12-18-Start%20Spark-20181218113335.png)
+![](img/2018-12-19-Start%20Spark/2018-12-18-Start%20Spark-20181218113335.png)
 
 ## 实践：提交一个Spark任务
 
@@ -153,7 +153,7 @@ Lines with a: 46, Lines with b: 23
 
 可以看到最终的运行结果
 
-![](2018-12-19-Start%20Spark/2018-12-18-Start%20Spark-20181220091455.png)
+![](img/2018-12-19-Start%20Spark/2018-12-18-Start%20Spark-20181220091455.png)
 
 
 ## Reference
