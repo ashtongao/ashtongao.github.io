@@ -17,7 +17,7 @@
         "grunt-contrib-uglify": "~0.5.1"
     },
     "scripts": {
-	"saved"  : "git add -A && git commit -m saved && git push origin",
+        "saved"  : "git add -A && git commit -m feat: saved",
         "preview": "cd _site; python -m SimpleHTTPServer 8020",
         "py3view": "cd _site; python3 -m http.server 8020",
         "watch"  : "grunt watch & npm run preview & jekyll serve -w",
