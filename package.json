@@ -17,7 +17,7 @@
         "grunt-contrib-uglify": "~0.5.1"
     },
     "scripts": {
-        "saved"  : "npm run move:png && git add -A && git commit -m 'feat: saved' ",
+        "saved"  : "npm run move:png && git add -A && git commit -m 'feat: saved' && git push origin ",
         "move:png"  : "cp -rf _posts/img/* img",
         "preview": "cd _site; python -m SimpleHTTPServer 8020",
         "py3view": "cd _site; python3 -m http.server 8020",
