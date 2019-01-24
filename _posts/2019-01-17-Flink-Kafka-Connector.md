@@ -15,7 +15,7 @@ tags:
 
 ## 基本介绍
 
-Kafka 是常见的消息队列，在Flink种，提供了特殊的Kafka Connector来从Kafka topic中读写数据。
+Kafka 是常见的消息队列，在Flink中，提供了特殊的Kafka Connector来从Kafka topic中读写数据。
 
 ## Kafka Consumer
 
