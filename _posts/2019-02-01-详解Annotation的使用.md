@@ -16,6 +16,8 @@ tags:
 
 Java Annotaion 从JDK 5.0引入，原生只有三个注解，但是可以自定义自己的注解
 
+注解其实跟注释很像，但是又不仅仅是注释，需要具体看每一个注解的含义
+
 内置的原生注解（Build-In Java Annotations）
 
 * @Override
