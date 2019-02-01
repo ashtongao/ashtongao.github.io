@@ -12,7 +12,7 @@ tags:
 ---
 
 
-## 一、注解（Java Annotation）摘要
+# 一、注解（Java Annotation）摘要
 
 Java Annotaion 从JDK 5.0引入，原生只有三个注解，但是可以自定义自己的注解
 
@@ -23,7 +23,7 @@ Java Annotaion 从JDK 5.0引入，原生只有三个注解，但是可以自定�
 * @Deprecated
 
 
-内置注解，用于自定注解的（Build-In Java Annotions used in other annotations）
+内置注解，用于修饰自定义注解的（Build-In Java Annotions used in other annotations）
 
 * @Target
 * @Retention
@@ -32,9 +32,9 @@ Java Annotaion 从JDK 5.0引入，原生只有三个注解，但是可以自定�
 
 后面会详细介绍每一个注解的含义
 
-## 二、原生注解
+# 二、原生注解
 
-### `@Override`
+### 1、 `@Override`
 
 标记方法被重写，编译机会校验方法是否可以被重写，如重写了静态方法等编译错误
 
@@ -60,9 +60,9 @@ public class TestOverride {
 }
 ```
 
-### `@SuperessWarnings`
+### 2、`@SuperessWarnings`
 
-忽略编译器的warning
+忽略编译器的warning，看如下例子
 
 ```java
 import java.util.*;
@@ -81,7 +81,10 @@ class TestSuppressWarnings {
 }
 ```
 
+如果直接使用会产生以下错误
+
 > 注: TestSuppreWarnings.java使用了未经检查或不安全的操作。
+> 
 > 注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
 
 可以在main方法前加上忽略注解`@SuperessWarnings("unchecked")`，即可编译通过
@@ -91,9 +94,9 @@ class TestSuppressWarnings {
     public static void main() ...
 ```
 
-### `@Deprecated`
+### 3、`@Deprecated`
 
-弃用，标记某个方法已经废弃，让编译器报错
+标记某个方法已经废弃，让编译器报错
 
 ```java
 
@@ -118,14 +121,15 @@ public class TestDeprecated {
 ```
 
 > 注: TestDeprecated.java使用或覆盖了已过时的 API。
+> 
 > 注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
 
 
-## 三、自定义注解(Custom Annotation)
+# 三、自定义注解(Custom Annotation)
 
-自定义注解是通过 `@interface MyAnnotation{}` 方法来实现的
+自定义注解是通过 `@interface MyAnnotation{}` 定义来实现的
 
-### 自定义注解的类型
+## 1、 自定义注解的类型
 
 * Marker Annotation
 * Single-Value Annotation
@@ -135,6 +139,8 @@ public class TestDeprecated {
 
 ### Marker Annotation
 
+实现时很简单，就只是标记有这样一个注解
+
 ```java
 @interface MyMakerAnnotation {}
 ```
@@ -143,7 +149,7 @@ public class TestDeprecated {
 
 ### Single-Value Annotation
 
-传入一个值的注解
+单值的注解的实现
 
 ```java
 @interface MySingleValueAnnotation {
@@ -159,7 +165,7 @@ public class TestDeprecated {
 
 ### Multi-Value Annotation
 
-多参数注解
+多值注解
 
 ```java
 @interface MyMultiValueAnnotation {
@@ -175,7 +181,7 @@ public class TestDeprecated {
 @MyMultivalueAnnotation(value1 = 10, value2 = "Test", value3 = "Test1");
 ```
 
-### 修饰自定义注解
+## 2、 修饰自定义注解
 
 Java 中还有四种内置的注解，用于修饰自定义注解的
 
@@ -224,7 +230,7 @@ import java.lang.annotation.ElementType;
 
 ### `@Retention`
 
-Retention用于标记注解是什么时候生效，SOURCE是源文件，CLASS是Class文件，RUNTIME是运行时生效
+Retention用于标记注解会被保留到哪个阶段，SOURCE是源文件，CLASS是Class文件，RUNTIME是运行时生效
 
 RetentionPolicy	| Availability
 --|--
@@ -293,12 +299,17 @@ class SubClass extends Superclass {};
 
 ### `@Documented`
 
-标记这是一个用于文档说明的注解
+标记这是一个用于文档说明的注解，会被Javadoc工具记录
 
+# 四、总结
+
+* Java 内置的注解只有三种：Override SuppressWarnings Deprecated
+* Java 在三种内置注解之外，又提供了自定义注解，同时提供了另外四个注解来帮助自定义
+* 自定义注解中，四种注解分别的作用：Target(确定修饰类型)，Retention（确定应用阶段），Inherited（确定是否继承），Documented（确定是否是文档说明）
 
 ## Refrence
 
 [Java Annotation](https://www.javatpoint.com/java-annotation)
 [Java Custom Annotation](https://www.javatpoint.com/custom-annotation)
-[Java Annotation认知(包括框架图、详细介绍、示例说明)](https://www.cnblogs.com/skywang12345/p/3344137.html)
+[Java Annotation认知(包括框架图、详细绍、示例说明)](https://www.cnblogs.com/skywang12345/p/3344137.html)
 
