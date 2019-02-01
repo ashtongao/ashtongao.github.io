@@ -83,7 +83,7 @@ class TestSuppressWarnings {
 }
 ```
 
-如果直接使用会产生以下错误
+如果直接使用会产生以下错误：
 
 > 注: TestSuppreWarnings.java使用了未经检查或不安全的操作。
 > 
@@ -121,6 +121,8 @@ public class TestDeprecated {
     }
 }
 ```
+
+可以看到，由于我们调用了`deprecatedFun`这个被`@Deprecated`修饰的方法，编译器产生了以下错误：
 
 > 注: TestDeprecated.java使用或覆盖了已过时的 API。
 > 
@@ -283,6 +285,7 @@ public class TestCustomAnnotation {
 ```
 
 > Hello Annotation
+> 
 > Value is 10
 
 ### `@Inherited`
@@ -305,8 +308,10 @@ class SubClass extends Superclass {};
 
 # 四、总结
 
-* Java 内置的注解只有三种：Override SuppressWarnings Deprecated
+* Java 内置的注解只有三种：`Override`、`SuppressWarnings`、`Deprecated`
+
 * Java 在三种内置注解之外，又提供了自定义注解，同时提供了另外四个注解来帮助自定义
+
 * 自定义注解中，四种注解分别的作用：Target(确定修饰类型)，Retention（确定应用阶段），Inherited（确定是否继承），Documented（确定是否是文档说明）
 
 ## Refrence
