@@ -6,6 +6,7 @@
 .AppleDouble
 .LSOverride
 _posts/img
+node_modules
 
 # Icon must end with two \r
 Icon
